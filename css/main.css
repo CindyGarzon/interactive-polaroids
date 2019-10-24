@@ -27,7 +27,7 @@ body {
 
 .polaroid:first-child {
   left: 250px;
-  top: 0;
+  top: 0 -50;
   transform: rotate(-10deg);
   z-index: 5;
 }
