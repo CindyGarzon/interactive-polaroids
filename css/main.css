@@ -4,43 +4,15 @@ html {
   font-family: sans-serif;
 }
 
-body {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  margin-top: 9em;
-  margin-right: 4em;
-  left: -60px;
-}
-
 .polaroid {
   margin: 0;
   padding: 10px;
   width: 250px;
-  transition: .15s;
+  position: absolute;
+  transition: all .2s linear;
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, .5);
-  position: absolute;
-  transform: rotate(5deg);
-}
-
-.polaroid:first-child {
-  left: 260px;
-  top: 0;
-  transform: rotate(-10deg);
-  z-index: 5;
-}
-
-.polaroid:nth-child(2) {
-  z-index: 10;
-}
-
-.polaroid:nth-child(3) {
-  right: 200px;
-  top: -50px;
-  transform: rotate(35deg);
-  z-index: 6;
 }
 
 .polaroid > img {
@@ -51,14 +23,48 @@ body {
 .polaroid > figcaption {
   color: #fff;
   text-shadow: 1px 1px 3px #000;
+  text-align: center;
   position: absolute;
-  bottom: 15px;
-  left: 35%;
-  right: auto;
+  bottom: 1em;
+  left: 5em;
+}
+
+.polaroid:nth-child(1) {
+  transform: rotate(-10deg);
+  z-index: 1;
+  left: 12em;
+  top: 6em;
+}
+
+.polaroid:nth-child(3) {
+  transform: rotate(32deg);
+  z-index: 2;
+  left: 24em;
+  top: 6em;
+}
+
+.polaroid:nth-child(2) {
+  transform: rotate(5deg);
+  z-index: 3;
+  left: 17em;
+  top: 10em;
 }
 
 .polaroid:hover {
-  z-index: 1000;
+  z-index: 4;
   transform: rotate(0deg);
-  box-shadow: 0 0 5px 0 #000;
+  box-shadow: 5px 4px 10px black;
+}
+
+figure:first-of-type:hover,
+figure:last-of-type:hover,
+figure:nth-child(2):hover {
+  z-index: 100;
+}
+
+figure:nth-child(2) {
+  z-index: 3;
+  top: 150px;
+  left: 290px;
+  transform: rotate(7deg);
 }
